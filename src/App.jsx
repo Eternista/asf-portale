@@ -1,5 +1,5 @@
 import socials from './data/socials.json'
-import logo from './assets/logo.webp'
+import site from './data/site.json'
 
 const iconMap = {
   instagram: (
@@ -53,8 +53,8 @@ const defaultDescription = {
 export default function App() {
   return (
     <main className="page-shell">
-      <div className="logo-block" aria-label="Stowarzyszenie Topory logo">
-        <img src={logo} alt="Stowarzyszenie Topory logo" className="logo-image" />
+      <div className="logo-block">
+        <img src={site.logo} alt={`${site.name} logo`} className="logo-image" fetchpriority="high" />
       </div>
 
       <div className="socials-panel">

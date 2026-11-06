@@ -1,4 +1,4 @@
-# Topory Linki
+# ASF-Portale
 
 Prosta baza strony typu linktree / social links z React i Tailwind CSS, gotowa do wdrożenia na Netlify.
 
@@ -45,3 +45,13 @@ Panel edycji linków: `https://<twoja-domena>/admin/`. Linki są w `src/data/soc
 3. Otwórz `http://localhost:5173/admin/`
 
 Pliki CMS: `public/admin/index.html`, `public/admin/config.yml`.
+
+### Ustawienia strony (logo, nazwa, opis)
+W panelu: **Strona → Ustawienia strony**. Dane trafiają do `src/data/site.json`, a logo do `public/uploads/`.
+Nazwa i opis są wstawiane przy buildzie także do `<title>`, meta description i podglądu przy udostępnianiu (og:*).
+
+## Powielenie na inne stowarzyszenie
+1. Skopiuj repo (np. *Use this template* / fork / nowe repo z kopią plików).
+2. Jeśli główna gałąź nazywa się inaczej niż `master`, zmień `branch` w `public/admin/config.yml`.
+3. Podłącz repo do nowej strony na Netlify i włącz Identity + Git Gateway (jak wyżej).
+4. W `/admin/` podmień logo, nazwę, opis i linki.

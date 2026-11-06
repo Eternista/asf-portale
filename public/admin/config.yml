@@ -14,6 +14,24 @@ collections:
   - name: settings
     label: Strona
     files:
+      - name: site
+        label: Ustawienia strony (logo, nazwa)
+        file: src/data/site.json
+        format: json
+        fields:
+          - name: name
+            label: Nazwa stowarzyszenia
+            widget: string
+            hint: 'Tytuł karty w przeglądarce i tekst alternatywny logo'
+          - name: description
+            label: Opis strony
+            widget: text
+            hint: 'Krótki opis widoczny w Google i przy udostępnianiu linku'
+          - name: logo
+            label: Logo
+            widget: image
+            choose_url: false
+            hint: 'Najlepiej PNG/WebP z przezroczystym tłem, szerokość ok. 1000 px, do ~300 kB'
       - name: socials
         label: Linki
         file: src/data/socials.json
