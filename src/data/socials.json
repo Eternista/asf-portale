@@ -1,0 +1,29 @@
+{
+  "links": [
+    {
+      "name": "Stowarzyszenie Topory",
+      "link": "https://www.instagram.com/stowarzyszenietopory/",
+      "media": "instagram"
+    },
+    {
+      "name": "Topory",
+      "link": "https://www.facebook.com/topory",
+      "media": "facebook"
+    },
+    {
+      "name": "Topory Olsztyn",
+      "link": "https://www.facebook.com/ToporyOlsztyn/",
+      "media": "facebook"
+    },
+    {
+      "name": "Topory Olsztyn Instagram",
+      "link": "https://www.instagram.com/toporyolsztyn/",
+      "media": "instagram"
+    },
+    {
+      "name": "Topory Trójmiasto",
+      "link": "https://www.facebook.com/topory.trojmiasto",
+      "media": "facebook"
+    }
+  ]
+}

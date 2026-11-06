@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.87);
+  background: #070707;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --bg: #070707;
+  --panel: #0d0d0d;
+  --panel-soft: #171717;
+  --ink: #f5d300;
+  --red: #b31218;
+  --red-soft: rgba(179, 18, 24, 0.18);
+  --line: rgba(245, 211, 0, 0.5);
+  --yellow: #f5d300;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  padding: 24px 16px 48px;
+}
+
+.logo-block {
+  width: min(92vw, 760px);
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(0 12px 28px rgba(179, 18, 24, 0.12));
+}
+
+.logo-image {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  max-height: 58vh;
+  object-fit: contain;
+}
+
+.socials-panel {
+  width: min(92vw, 720px);
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 2px solid var(--yellow);
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.96);
+  padding: 14px 16px;
+  color: #ffffff;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-1px);
+  border-color: var(--red);
+  background: rgba(17, 17, 17, 0.98);
+  box-shadow: 0 10px 28px rgba(179, 18, 24, 0.18);
+}
+
+.social-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(245, 211, 0, 0.12);
+  border: 1px solid rgba(245, 211, 0, 0.85);
+  color: #f5d300;
+  flex-shrink: 0;
+}
+
+.social-icon svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.social-link:hover .social-icon {
+  background: linear-gradient(135deg, #b31218, #d32029);
+  border-color: rgba(179, 18, 24, 0.8);
+  color: #fff;
+}
+
+.social-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.social-copy strong {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.social-copy small {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.78rem;
+}
+
+.arrow {
+  color: var(--yellow);
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+  text-shadow: 0 0 18px rgba(245, 211, 0, 0.22);
+}
+
+.social-link:hover .arrow {
+  color: var(--red);
+  text-shadow: 0 0 18px rgba(179, 18, 24, 0.35);
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    padding-top: 18px;
+  }
+
+  .social-link {
+    padding: 12px 12px;
+  }
+
+  .social-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 1.3rem;
+  }
+
+  .social-copy strong {
+    font-size: 1rem;
+  }
+}

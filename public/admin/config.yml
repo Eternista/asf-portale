@@ -1,0 +1,46 @@
+backend:
+  name: git-gateway
+  branch: master
+
+# Lokalna edycja bez logowania: `npx decap-server` + `npm run dev`, potem http://localhost:5173/admin/
+local_backend: true
+
+locale: pl
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: settings
+    label: Strona
+    files:
+      - name: socials
+        label: Linki
+        file: src/data/socials.json
+        format: json
+        fields:
+          - name: links
+            label: Linki
+            label_singular: Link
+            widget: list
+            summary: '{{fields.name}} — {{fields.link}}'
+            fields:
+              - name: name
+                label: Tekst
+                widget: string
+              - name: link
+                label: Link (URL)
+                widget: string
+                hint: 'Pełny adres, np. https://www.instagram.com/... lub mailto:kontakt@example.com'
+                pattern: ['^(https?://|mailto:|tel:).+', 'Link musi zaczynać się od https://, http://, mailto: lub tel:']
+              - name: media
+                label: Ikona
+                widget: select
+                default: default
+                options:
+                  - { label: Instagram, value: instagram }
+                  - { label: Facebook, value: facebook }
+                  - { label: YouTube, value: youtube }
+                  - { label: Spotify, value: spotify }
+                  - { label: E-mail, value: email }
+                  - { label: 'Link (domyślna)', value: default }
